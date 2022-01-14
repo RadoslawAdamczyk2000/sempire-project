@@ -194,7 +194,7 @@ ul{
     display: flex;
     height: 1.5rem;
     justify-content: center;
-    margin: 0 .15rem;
+    margin: 0 .5rem;
     width: 1.5rem;
 }
 
@@ -251,3 +251,29 @@ h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+/* content box */
+
+.content{
+    width: 90%;
+}
+
+.content > figure {
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.content > figure  > img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.content-text{
+
+}
+
+.content-text > p{
+    text-align: justify;
+}
+
+/* card */
