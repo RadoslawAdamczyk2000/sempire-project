@@ -51,8 +51,7 @@ html{
     font-size: 62.5%;
 }
 
-button,
-input{
+button{
     background: none;
     border: none;
     outline: none;
@@ -66,7 +65,7 @@ ul{
 /* boxy */
 .wrapper{
     background-color:var(--pageColor);
-    height: 851px;
+    height: 841px;
     margin: auto;
     /* overflow: hidden; */
     position: relative;
@@ -78,8 +77,8 @@ ul{
 .info-box{
     /* background: red; */
     display: grid;
-    grid-template-columns:1fr 4fr 1fr;
-    height: 6rem;
+    grid-template-columns:2fr 6fr 1fr;
+    height: 5.5rem;
 }
 
 .title{
@@ -96,7 +95,7 @@ ul{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width:20rem;
+    width:16.5rem;
 }
 
 .title > div > span{
@@ -209,8 +208,8 @@ ul{
 
 menu{
     align-items: center;
-    border-bottom:.2rem solid var(--hrefColor);
-    border-top:.2rem solid var(--hrefColor);
+    border-bottom:.15rem solid var(--hrefColor);
+    border-top:.15rem solid var(--hrefColor);
     display: flex;
     flex-direction: row;
     height: 5rem;
@@ -268,12 +267,145 @@ h1{
     width: 100%;
 }
 
-.content-text{
-
-}
 
 .content-text > p{
     text-align: justify;
 }
 
-/* card */
+/* card box */
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns:repeat(2 , 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    width: 90%;
+}
+
+
+.card{
+    border: .1rem solid var(--fontsColor);
+    font-size: var(--fsCard);
+    position: relative;
+    margin: auto;
+    width: 20rem;
+}
+
+.card > figure {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.card > figure > img{
+    object-fit: contain;
+}
+
+.card > .card-content {
+    margin: .5rem;
+    width: 90%;
+}
+
+.card > .card-content > a{
+    color:var(--hrefColor);
+    margin: .5rem auto;
+    text-align: left;
+}
+
+.card > .card-content {
+    margin: .25rem auto;
+    text-align: justify;
+}
+
+.card > .card-footer{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0.5rem .75rem;
+}
+
+.card > .card-footer > .card-value{
+    align-items: center;
+    display: flex;
+    flex: 1;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.card > .card-footer > .card-input{
+    display: grid;
+    height: 2.7rem;
+    grid-template-columns: 1fr 3fr;
+}
+
+.card > .card-footer > .card-input > input{
+    height: 2.7rem;
+    text-align: center;
+    width: 2.7rem;
+}
+
+.card > .card-footer > .card-input > button{
+    background-color: #009900;
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+    color:var(--pageColor);
+    height: 2.7rem;
+    transition:.12s linear background-color;
+}
+
+.card > .card-footer > .card-input > button:hover{
+    background-color: var(--cartColor);
+}
+
+/* footer */
+
+footer{
+    background-color: var(--backgroundColor);
+    border-top:.5rem solid var(--hrefColor);
+    height:4rem;
+    align-items: center;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+footer > p {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    line-height: 2rem;
+    justify-content:flex-end;
+    width: 40rem;
+}
+
+footer > p > span{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 2rem;
+
+}
+
+footer > p > i{
+    align-items: center;
+    color: #f01;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    position: relative;
+    height: 1.2rem;
+    margin: 0 .5rem;
+    width: 1.2rem;
+}
+
+footer > p > a{
+    margin: 0 .5rem;
+    color:var(--hrefColor);
+}
