@@ -39,6 +39,7 @@ button{
 body{
     align-items: center;
     background-color:var(--backgroundColor);
+    color:var(--fontsColor);
     display: flex;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
@@ -73,20 +74,16 @@ ul{
 }
 
 /* NAGŁÓWEK */
-header{
-    background:lime;
-}
 
 .info-box{
     /* background: red; */
     display: grid;
-    grid-template-columns:1fr 3fr 1fr;
-    height: 5rem;
+    grid-template-columns:1fr 4fr 1fr;
+    height: 6rem;
 }
 
 .title{
     align-items: center;
-    background: aqua;
     display: flex;
     justify-content: center;
     font-size: var(--fsTitle);
@@ -110,6 +107,9 @@ header{
 
 .title > div > span:nth-of-type(1){
     background-color:var(--headingColor);
+    border-bottom:.2rem solid var(--headingColor);
+    border-left:.2rem solid var(--headingColor);
+    border-top:.2rem solid var(--headingColor);
     color:var(--pageColor);
     justify-content: flex-end;
 }
@@ -158,6 +158,7 @@ header{
 }
 .contact > address > a > span:nth-of-type(1) > i{
     align-items: center;
+    color:var(--headingColor);
     display: flex;
     justify-content: center;
 }
@@ -166,20 +167,84 @@ header{
     padding: 0 .5rem;
 }
 
+.shop-cart{
+    align-items: center;
+    background-color: #009900;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    transition: .12s linear filter;
+}
+
+.shop-cart:hover{
+    filter:brightness(105%);
+}
+
+.shop-cart > p{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: var(--fsCart);
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.shop-cart > p > span:nth-of-type(1){
+    align-items: center;
+    display: flex;
+    height: 1.5rem;
+    justify-content: center;
+    margin: 0 .15rem;
+    width: 1.5rem;
+}
+
+.shop-cart > p > span:nth-of-type(1) > i{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 /* menu */
 
 menu{
     align-items: center;
+    border-bottom:.2rem solid var(--hrefColor);
+    border-top:.2rem solid var(--hrefColor);
     display: flex;
     flex-direction: row;
-    height: 7rem;
+    height: 5rem;
     justify-content: space-evenly;
 }
 
+menu > li{
+    height: 100%;
+    transition: .12s linear background-color, .12s linear border-bottom, .12s linear color;
+    width: calc(100% / 6);
+}
+
+menu > li:hover{
+    background-color: var(--hrefColor);
+    color:#fff;
+}
+
+
+menu > li > a{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
 /* main */
 
-h1{
+main{
+    padding: 0 3rem;
+}
 
+h1{
+    font-size: var(--fsHeading);
+    margin: 1rem 0;
 }
 
 .main-box{
